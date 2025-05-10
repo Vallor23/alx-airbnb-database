@@ -119,3 +119,8 @@ This document outlines the database requirements, entities, relationships, and a
 7. **User and Message**
     * User can send many Messages → One-to-Many
     * User can also receive many Messages → One-to-Many
+
+## Assumptions
+
+* A booking must be associated with both a user and a property.
+* A property cannot be double-booked for overlapping dates (handled by business logic).
