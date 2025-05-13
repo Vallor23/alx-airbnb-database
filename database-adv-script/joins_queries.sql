@@ -1,0 +1,14 @@
+SELECT *
+FROM Booking
+INNER JOIN User
+;
+
+SELECT *
+FROM Property
+LEFT JOIN Review
+;
+
+SELECT *
+FROM User
+FULL OUTER JOIN Booking
+;
