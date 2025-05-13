@@ -10,5 +10,5 @@ LEFT JOIN Review ON Property.Property_id = Review.Property_id
 
 SELECT *
 FROM User
-FULL OUTER JOIN Booking
+FULL OUTER JOIN Booking ON User.user_id = Booking.user_id
 ;
