@@ -19,12 +19,14 @@ INNER JOIN User ON Booking.user_id = User.user_id;
 ```sql
 SELECT *
 FROM Property
-LEFT JOIN Review ON Property.property_id = Review.property_id;
+LEFT JOIN Review ON Property.property_id = Review.property_id
+ORDER BY Property.property_id ASC;
 ```
 
 * Returns all properties.
 * Shows matching reviews if available.
 * Returns NULL for properties without reviews.
+* Orders the result by Property.property_id in ascending order.
 
 ### 3️⃣ FULL OUTER JOIN — All Users and Bookings
 
