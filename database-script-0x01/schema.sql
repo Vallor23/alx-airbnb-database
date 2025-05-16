@@ -1,3 +1,5 @@
+USE airbnb_clone;
+
 CREATE TABLE IF NOT EXISTS User(
     user_id INT AUTO_INCREMENT PRIMARY KEY,
     first_name VARCHAR(255) NOT NULL,
@@ -12,9 +14,9 @@ CREATE TABLE IF NOT EXISTS User(
 CREATE TABLE IF NOT EXISTS Property(
     property_id INT AUTO_INCREMENT PRIMARY KEY,
     host_id INT NOT NULL,
-    name VARCHAR NOT NULL,
+    name VARCHAR(255) NOT NULL,
     description TEXT NOT NULL,
-    location VARCHAR NOT NULL,
+    location VARCHAR(255) NOT NULL,
     pricepernight DECIMAL NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
@@ -39,7 +41,7 @@ CREATE TABLE IF NOT EXISTS Payment (
     booking_id INT NOT NULL,
     amount DECIMAL(10, 2) NOT NULL,
     payment_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    payment_method ENUM('credit_card', 'paypal', 'stripe') NOT NULL,
+    payment_method ENUM('credit_card', 'paypal', 'mpesa') NOT NULL,
     FOREIGN KEY (booking_id) REFERENCES Booking(booking_id)
 );
 

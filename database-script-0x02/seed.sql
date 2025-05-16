@@ -1,7 +1,8 @@
 INSERT INTO User( first_name, last_name, email, password_hash, Phone_number, role )
 VALUES
-('Alice', 'Smith', 'alice.smith@example.com', 'hashed_pwd_1', '+254712345678', 'user'),
-('John', 'Kamau', 'john.kamau@example.com', 'hashed_pwd_2', '+254798765432', 'host');
+('Alice', 'Smith', 'alicesmith213@gmail.com', 'hashed_pwd_1', '+254712345678', 'guest'),
+('John', 'Kamau', 'johnkamau11@gmail.com', 'hashed_pwd_2', '+254798765432', 'host'),
+('Trent', 'Omondi', 'trentenos349@gmail.com', 'hashed_pwd_3', '+254793766432', 'guest');
 
 INSERT INTO Property(host_id, name, description, location, pricepernight)
 VALUES 
@@ -23,8 +24,7 @@ VALUES
 (1, 1, 5, 'Amazing stay! The view of the ocean was beautiful.'),
 (3, 2, 4, 'Nice location and clean, but a bit noisy at night.');
 
-INSERT INTO User( user_id, property_id, message_body )
+INSERT INTO Message( sender_id, receiver_id, message_body )
 VALUES
 (1, 2, 'Hello! Is your apartment available in August?'),
 (2, 1, 'Hi Alice, yes it is! Feel free to book anytime.');
-
